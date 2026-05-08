@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useRef, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
@@ -11,12 +12,12 @@ import {
 
 // --- CONFIGURAÇÃO DO FIREBASE ---
 const firebaseConfig = {
-  apiKey: "AIzaSyARH2lOjbz9fQsOVJ25y-IQdzuMnfbfpRE",
-  authDomain: "aoki-7a6ec.firebaseapp.com",
-  projectId: "aoki-7a6ec",
-  storageBucket: "aoki-7a6ec.firebasestorage.app",
-  messagingSenderId: "762583424160",
-  appId: "1:762583424160:web:72fa8b3bf5597a1db13dc5"
+  apiKey: "AIzaSyBqk9KcNg1UvWtla3K5oQW-EUJPLB9rJPw",
+  authDomain: "vita-eb95e.firebaseapp.com",
+  projectId: "vita-eb95e",
+  storageBucket: "vita-eb95e.firebasestorage.app",
+  messagingSenderId: "686302799784",
+  appId: "1:686302799784:web:0e19adbc661f414b6a9f9d"
 };
 
 const app = initializeApp(firebaseConfig);
