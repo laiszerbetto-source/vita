@@ -5,19 +5,29 @@ import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, collection, onSnapshot, doc, setDoc, deleteDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { 
-  CheckCircle2, XCircle, Clock, Send, Instagram, Facebook, Linkedin, 
-  Plus, Trash2, Smartphone, Eye, Copy, Image as ImageIcon, Film, 
+  CheckCircle2, XCircle, Clock, Send, Plus, Trash2, Smartphone, Eye, Copy, Image as ImageIcon, Film, 
   Hash, Check, Layers, Square, ThumbsUp, MessageSquare, Share2, Edit3, Globe, Calendar, AlertCircle, Briefcase, Loader2, Share, ChevronLeft, ChevronRight, LayoutGrid, FileDown, SendHorizonal, Maximize2
 } from 'lucide-react';
 
+// --- ÍCONES DE MARCAS (Substitutos Nativos) ---
+const Instagram = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+);
+const Facebook = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+);
+const Linkedin = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+);
+
 // --- CONFIGURAÇÃO DO FIREBASE ---
 const firebaseConfig = {
-  apiKey: "AIzaSyBqk9KcNg1UvWtla3K5oQW-EUJPLB9rJPw",
-  authDomain: "vita-eb95e.firebaseapp.com",
-  projectId: "vita-eb95e",
-  storageBucket: "vita-eb95e.firebasestorage.app",
-  messagingSenderId: "686302799784",
-  appId: "1:686302799784:web:0e19adbc661f414b6a9f9d"
+  apiKey: "AIzaSyARH2lOjbz9fQsOVJ25y-IQdzuMnfbfpRE",
+  authDomain: "aoki-7a6ec.firebaseapp.com",
+  projectId: "aoki-7a6ec",
+  storageBucket: "aoki-7a6ec.firebasestorage.app",
+  messagingSenderId: "762583424160",
+  appId: "1:762583424160:web:72fa8b3bf5597a1db13dc5"
 };
 
 const app = initializeApp(firebaseConfig);
